@@ -19,9 +19,10 @@ stdenv.mkDerivation rec {
   '';
 
   installPhase = ''
-    mkdir -p $out/{bin,share/man/man1}
+    mkdir -p $out/{bin,share/man/man1,share/bash-completion/completions}
     mv ${name}/memo $out/bin/
     mv ${name}/doc/memo.1 $out/share/man/man1/memo.1
+    mv ${name}/completion/memo.bash $out/share/bash-completion/completions/memo.sh
     gzip -9nf $out/share/man/man1/memo.1
   '';
 }
