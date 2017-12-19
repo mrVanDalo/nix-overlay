@@ -1,8 +1,7 @@
 # My Nixpkgs Overlay
 
-> This is an experiment area
-
 > `palo` is the example package defined in here (it is actually my user name)
+
 
 ## How to install 
 
@@ -27,3 +26,16 @@ now you can install the packages from the overlay
     environment.systemPackages = [
         pkgs.palo
     ];
+
+
+## How to check builds
+
+    nix-build -p palo
+    
+should create a `./result` folder which contains the result of the package.
+
+
+# Links
+
+* [A presentation about Overlays](https://www.youtube.com/watch?v=6bLF7zqB7EM&feature=youtu.be&t=39m50s) 
+* [Package Binaries](https://nixos.wiki/wiki/Packaging_Binaries)

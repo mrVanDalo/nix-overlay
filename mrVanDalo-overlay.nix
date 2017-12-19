@@ -6,5 +6,6 @@ let
 in
 
 {
+  memo = callPackage ./pkgs/memo { };
   newpencil = callPackage ./pkgs/newpencil { };
 }
