@@ -1,12 +1,22 @@
-# My Nixpkgs 
+# My Nixpkgs Overlay
 
-This is an experiment area
+> This is an experiment area
 
-## How to build something
+> `palo` is the example package defined in here (it is actually my user name)
 
-    nix-build -E 'with import <nixpkgs> {} ; callPackage ./slack-bin.nix {}';
+## How to install 
 
-## How to use in configuration.nix
+### local
+
+To install the overlay into `~/.config/nixpkgs/overlays` just run: 
+
+    ./install.sh
+
+now you can test your builds using:
+    
+    nix-shell -p palo
+
+### global
 
 add the following to your `/etc/nixos/configuration.nix`:
 
@@ -15,5 +25,5 @@ add the following to your `/etc/nixos/configuration.nix`:
 now you can install the packages from the overlay
 
     environment.systemPackages = [
-        pkgs.memo
+        pkgs.palo
     ];

@@ -18,7 +18,7 @@
   # name it
   # -------
   name = "bitwig";
-  
+
   # targetSystem packages
   # ---------------------
   # these are packages which are compiled for the target  
@@ -40,14 +40,17 @@
           };
       }
     ))
-
+    liblo
+    zlib
+    fftw
+    minixml
     libcxx
     alsaLib
 
     # the following are needed for building
     #libcxxStdenv
     glibc
-    
+
     # the following are needed for Sononym run
     gtk2-x11
     atk
@@ -71,14 +74,16 @@
     xlibs.libXrender
     xlibs.libXtst
     xlibs.libXScrnSaver
-    
+
     gnome3.gconf
     nss
     nspr
     expat
     eudev
+
+    ladspaPlugins
   ];
-  
+
   # multilib packages
   # -----------------
   # these are packages compiled for multiple system 
