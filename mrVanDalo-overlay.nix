@@ -7,7 +7,7 @@ in
 
 {
   memo = callPackage ./pkgs/memo { };
-  newpencil = callPackage ./pkgs/newpencil { };
+  pencil = callPackage ./pkgs/pencil { };
 
   bitwig-studio1 = callPackage ./pkgs/bitwig-studio/bitwig-studio1.nix {
     inherit (super.gnome2) zenity;
