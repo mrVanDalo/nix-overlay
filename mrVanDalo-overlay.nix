@@ -20,10 +20,11 @@ in
     inherit (super.xorg) libXmu libXi;
   };
   rtmidi3 = callPackage ./pkgs/rtmidi { };
-
+  rtaudio5 = callPackage ./pkgs/rtaudio { };
   vcvrack = callPackage ./pkgs/vcvrack {
     glew   = self.glew21;
     rtmidi = self.rtmidi3;
+    rtaudio = self.rtaudio5;
   };
 
   bitwig-studio1 = callPackage ./pkgs/bitwig-studio/bitwig-studio1.nix {

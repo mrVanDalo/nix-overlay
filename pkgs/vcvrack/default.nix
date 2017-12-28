@@ -1,7 +1,7 @@
 { lib, stdenv, fetchFromGitHub, fetchgit, makeWrapper, gcc,
   # buildInputs
   curl, glew, glfw, gnome2, jansson, libsamplerate, libzip,
-  pkgconfig, rtaudio, rtmidi,
+  pkgconfig, rtaudio, rtmidi, jack2Full, portaudio,
   ... }:
 
 stdenv.mkDerivation rec {
@@ -47,11 +47,13 @@ stdenv.mkDerivation rec {
     glew
     glfw
     gnome2.gtk.dev
+    jack2Full
     jansson
     libsamplerate
     libzip
     makeWrapper
     pkgconfig
+    portaudio
     rtaudio
     rtmidi
   ];
