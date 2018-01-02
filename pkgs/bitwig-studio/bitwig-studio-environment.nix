@@ -1,10 +1,8 @@
 # NixOs fhs-user script
 # ---------------------
 #
-# this is a script for NixOS users, to start Bitwig.
-# It is quite similar to docker or rkt but it uses system libs
-# to create a "normal" Linux environment so dynamic links can find
-# everything they need.
+# this is a script to start Bitwig Studio.
+# it is necessary because without my VSTs won't run.
 
 
 # function header
@@ -15,8 +13,8 @@
 # -------------
 (pkgs.buildFHSUserEnv {
 
-  # name it
-  # -------
+  # name of the programm
+  # --------------------
   name = "bitwig";
 
   # targetSystem packages
@@ -40,7 +38,6 @@
     alsaLib
     glibc
 
-    # the following are needed for Sononym run
     gtk2-x11
     atk
     mesa_glu
@@ -89,4 +86,4 @@
     export TERM="xterm"
   '';
 
-}).env
+})

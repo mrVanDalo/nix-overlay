@@ -35,8 +35,5 @@ in
     inherit (self) bitwig-studio1;
   };
 
-  bitwig-studio = callPackage ./pkgs/bitwig-studio/bitwig-studio2.nix {
-    inherit (super.gnome2) zenity;
-    inherit (self) bitwig-studio1;
-  };
+  bitwig-studio = callPackage ./pkgs/bitwig-studio/bitwig-studio-environment.nix { };
 }
