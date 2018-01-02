@@ -6,7 +6,7 @@ bitwig-studio1.overrideAttrs (oldAttrs: rec {
   version = "2.2.2";
 
   src = fetchurl {
-    url = "https://downloads.bitwig.com/stable/${version}/bitwig-studio-${version}.deb";
+    url    = "https://downloads.bitwig.com/stable/${version}/bitwig-studio-${version}.deb";
     sha256 = "1x4wka32xlygmhdh9rb15s37zh5qjrgap2qk35y34c52lf5aak22";
   };
 

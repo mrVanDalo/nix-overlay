@@ -1,13 +1,8 @@
 { stdenv, fetchurl, alsaLib, bzip2, cairo, dpkg, freetype, gdk_pixbuf
-, glib, gtk2, harfbuzz, jdk, lib, xorg 
-# libX11, libXau, libXcursor, libXdmcp , libXext, libXfixes, libXrender,
+, glib, gtk2, harfbuzz, jdk, lib, xorg
 , libbsd, libjack2, libpng
-#, libxcb
 , libxkbcommon
-#, libxkbfile
 , makeWrapper, pixman
-#, xcbutil
-#, xcbutilwm
 , xdg_utils, zenity, zlib }:
 
 stdenv.mkDerivation rec {
@@ -15,7 +10,7 @@ stdenv.mkDerivation rec {
   version = "1.3.16";
 
   src = fetchurl {
-    url = "https://downloads.bitwig.com/stable/${version}/bitwig-studio-${version}.deb";
+    url    = "https://downloads.bitwig.com/stable/${version}/bitwig-studio-${version}.deb";
     sha256 = "0n0fxh9gnmilwskjcayvjsjfcs3fz9hn00wh7b3gg0cv3qqhich8";
   };
 
@@ -23,16 +18,14 @@ stdenv.mkDerivation rec {
 
   unpackCmd = "mkdir root ; dpkg-deb -x $curSrc root";
 
-  dontBuild = true;
+  dontBuild    = true;
   dontPatchELF = true;
-  dontStrip = true;
+  dontStrip    = true;
 
-  libPath = lib.makeLibraryPath [
-    alsaLib bzip2.out cairo freetype gdk_pixbuf glib gtk2 harfbuzz
-    xorg.libX11 xorg.libXau xorg.libXcursor xorg.libXdmcp xorg.libXext xorg.libXfixes
-    xorg.libXrender
-    libbsd libjack2 libpng xorg.libxcb xorg.libxkbfile pixman xorg.xcbutil xorg.xcbutilwm
-    zlib
+  libPath = with xorg; lib.makeLibraryPath [
+    alsaLib bzip2.out cairo freetype gdk_pixbuf glib gtk2 harfbuzz libX11 libXau
+    libXcursor libXdmcp libXext libXfixes libXrender libbsd libjack2 libpng libxcb
+    libxkbfile pixman xcbutil xcbutilwm zlib
   ];
 
   binPath = lib.makeBinPath [
@@ -102,6 +95,6 @@ stdenv.mkDerivation rec {
     homepage = http://www.bitwig.com/;
     license = licenses.unfree;
     platforms = [ "x86_64-linux" ];
-    maintainers = with maintainers; [ michalrus ];
+    maintainers = with maintainers; [ michalrus mrVanDalo ];
   };
 }
