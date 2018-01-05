@@ -35,8 +35,8 @@ let
     # todo : make these `nixos.vcvrackPlugins.<plugin-name>`
     AmalgamatedHarmonics = fetchgit {
       url    = "https://github.com/jhoar/AmalgamatedHarmonics.git";
-      rev    = "v0.5.5";
-      sha256 = "0g7rd3mxhlbxi8p7x7hqccfnn1mdyxkbyd60kpa85ya3a2q07sfi";
+      rev    = "v0.5.7";
+      sha256 = "04wysq0fmdw4zyp83fr0s23wq19kha23ykfaqcy1krkl31hrirrm";
     };
     AS = fetchgit {
       url    = "https://github.com/AScustomWorks/AS.git";
