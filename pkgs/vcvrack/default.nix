@@ -40,8 +40,8 @@ let
     };
     AS = fetchgit {
       url    = "https://github.com/AScustomWorks/AS.git";
-      rev    = "0.5.1";
-      sha256 = "0vgskzx24s2i45gk6kacha9j3jb97yhxx2088078dshmp6dm3gg5";
+      rev    = "0.5.4";
+      sha256 = "0px1r8jccbh7grnxllvqc64lnd7xsr1ffkxdlmpvfs9cxbicljiz";
     };
     BogaudioModules = fetchgit {
       url    = "https://github.com/bogaudio/BogaudioModules.git";
