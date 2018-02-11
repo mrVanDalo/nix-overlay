@@ -36,4 +36,7 @@ in
   };
 
   bitwig-studio = callPackage ./pkgs/bitwig-studio/bitwig-studio-environment.nix { };
+
+  timewarrior = callPackage ./pkgs/timewarrior {};
+
 }
