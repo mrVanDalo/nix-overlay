@@ -35,18 +35,18 @@ let
     # todo : make these `nixos.vcvrackPlugins.<plugin-name>`
     AmalgamatedHarmonics = fetchgit {
       url    = "https://github.com/jhoar/AmalgamatedHarmonics.git";
-      rev    = "v0.5.7";
-      sha256 = "04wysq0fmdw4zyp83fr0s23wq19kha23ykfaqcy1krkl31hrirrm";
+      rev    = "v0.5.8";
+      sha256 = "1k9641p2lmy549iaj2gmj9wsj5h611h1n7255bq3z6bmm4pdv89r";
     };
     AS = fetchgit {
       url    = "https://github.com/AScustomWorks/AS.git";
-      rev    = "0.5.4";
-      sha256 = "0px1r8jccbh7grnxllvqc64lnd7xsr1ffkxdlmpvfs9cxbicljiz";
+      rev    = "0.5.6";
+      sha256 = "0jp0ba264a4c4gydams3k4964mh3y47gmbpnhcapcdkq7q09ryv5";
     };
     BogaudioModules = fetchgit {
       url    = "https://github.com/bogaudio/BogaudioModules.git";
-      rev    = "v0.5.1";
-      sha256 = "04r8s47f3rc5yz7r6l0g8xn2cs2732bigm0nqw1v4dkcc989h121";
+      rev    = "v0.5.3";
+      sha256 = "10apg23wyzsk1y41241jcpkj1047h9ygfk45fcrf44sj310yw0ji";
     };
     Dekstop = fetchgit {
       url    = "https://github.com/dekstop/vcvrackplugins_dekstop";
@@ -72,11 +72,6 @@ let
       url    = "https://github.com/stellare-modular/vcv-link.git";
       rev    = "0.5.1";
       sha256 = "1b7rrdhfqrwrffxaswdqrykq7k8sxsbxr62pi3ggfphqrgkijspr";
-    };
-    UnusualSequencer =  fetchgit {
-      url    = "https://github.com/The-XOR/VCV-Sequencers.git";
-      rev    = "0a781d18d93cd966f4783d0b93e7bb8a001cfe26";
-      sha256 = "0p14cn9i3f1bpr6kwqbvv3vy2hjjicj6m08vkifhd5kfkqs64y2f";
     };
   };
 
