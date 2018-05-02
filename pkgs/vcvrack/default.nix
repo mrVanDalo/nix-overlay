@@ -48,10 +48,10 @@ let
       rev    = "v0.5.3";
       sha256 = "10apg23wyzsk1y41241jcpkj1047h9ygfk45fcrf44sj310yw0ji";
     };
-    Dekstop = fetchgit {
-      url    = "https://github.com/dekstop/vcvrackplugins_dekstop";
-      rev    = "v0.5.0";
-      sha256 = "1kqywcgf7vacg0f471v9xlvrsdqr64m6ivq13j0x3ka6j6nziyjq";
+    MrVanDalo = fetchgit {
+      url    = "https://github.com/mrVanDalo/VCVRecorder.git";
+      rev    = "v0.5.1";
+      sha256 = "050wm3q7vmfwpdpkj7d6xmlsnrnn0bhzc2mbvk5wggff03lw8l0h";
     };
     HetrickCV = fetchgit {
       url    = "https://github.com/mhetrick/hetrickcv.git";
