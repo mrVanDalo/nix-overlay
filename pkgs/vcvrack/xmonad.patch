@@ -1,0 +1,33 @@
+diff --git a/src/settings.cpp b/src/settings.cpp
+index 1c29c33..789a217 100644
+--- a/src/settings.cpp
++++ b/src/settings.cpp
+@@ -20,17 +20,17 @@ static json_t *settingsToJson() {
+ 	json_t *tokenJ = json_string(gToken.c_str());
+ 	json_object_set_new(rootJ, "token", tokenJ);
+ 
+-	if (!windowIsMaximized()) {
+-		// windowSize
+-		Vec windowSize = windowGetWindowSize();
+-		json_t *windowSizeJ = json_pack("[f, f]", windowSize.x, windowSize.y);
+-		json_object_set_new(rootJ, "windowSize", windowSizeJ);
+-
+-		// windowPos
+-		Vec windowPos = windowGetWindowPos();
+-		json_t *windowPosJ = json_pack("[f, f]", windowPos.x, windowPos.y);
+-		json_object_set_new(rootJ, "windowPos", windowPosJ);
+-	}
++//	if (!windowIsMaximized()) {
++//		// windowSize
++//		Vec windowSize = windowGetWindowSize();
++//		json_t *windowSizeJ = json_pack("[f, f]", windowSize.x, windowSize.y);
++//		json_object_set_new(rootJ, "windowSize", windowSizeJ);
++//
++//		// windowPos
++//		Vec windowPos = windowGetWindowPos();
++//		json_t *windowPosJ = json_pack("[f, f]", windowPos.x, windowPos.y);
++//		json_object_set_new(rootJ, "windowPos", windowPosJ);
++//	}
+ 
+ 	// opacity
+ 	float opacity = gToolbar->wireOpacitySlider->value;
