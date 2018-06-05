@@ -18,6 +18,8 @@ in
 
   timewarrior = callPackage ./pkgs/timewarrior {};
 
+  ctmg = callPackage ./pkgs/ctmg{};
+
 
   # vcvrack
   # -------
