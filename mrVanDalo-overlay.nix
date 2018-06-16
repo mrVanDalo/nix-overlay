@@ -6,11 +6,11 @@ let
 in
 
 {
-  darktable = callPackage ./pkgs/darktable {
-    inherit (super.gnome2) GConf libglade;
-    pugixml = super.pugixml.override { shared = true; };
-    inherit (super.xorg) libXau libXdmcp libpthreadstubs libxcb libxshmfence;
-  };
+  #darktable = callPackage ./pkgs/darktable {
+  #  inherit (super.gnome2) GConf libglade;
+  #  pugixml = super.pugixml.override { shared = true; };
+  #  inherit (super.xorg) libXau libXdmcp libpthreadstubs libxcb libxshmfence;
+  #};
 
   memo = callPackage ./pkgs/memo {};
 
@@ -20,6 +20,7 @@ in
 
   ctmg = callPackage ./pkgs/ctmg{};
 
+  nerdfonts = callPackage ./pkgs/nerdfonts{};
 
   # vcvrack
   # -------
