@@ -16,6 +16,10 @@ in
 
   pencil = callPackage ./pkgs/pencil {};
 
+  patchwork-classic  = callPackage ./pkgs/patchwork-classic {
+    xorg = self.xlibs;
+  };
+
   timewarrior = callPackage ./pkgs/timewarrior {};
 
   ctmg = callPackage ./pkgs/ctmg{};
