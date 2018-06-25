@@ -6,25 +6,27 @@ let
 in
 
 {
+
+  # master copy
+  iptables = callPackage ./pkgs/iptables {};
+  memo = callPackage ./pkgs/memo {};
+  pencil = callPackage ./pkgs/pencil {};
+  timewarrior = callPackage ./pkgs/timewarrior {};
+  ctmg = callPackage ./pkgs/ctmg{};
+  nerdfonts = callPackage ./pkgs/nerdfonts{};
+
   #darktable = callPackage ./pkgs/darktable {
   #  inherit (super.gnome2) GConf libglade;
   #  pugixml = super.pugixml.override { shared = true; };
   #  inherit (super.xorg) libXau libXdmcp libpthreadstubs libxcb libxshmfence;
   #};
 
-  memo = callPackage ./pkgs/memo {};
-
-  pencil = callPackage ./pkgs/pencil {};
-
   patchwork-classic  = callPackage ./pkgs/patchwork-classic {
     xorg = self.xlibs;
   };
 
-  timewarrior = callPackage ./pkgs/timewarrior {};
 
-  ctmg = callPackage ./pkgs/ctmg{};
 
-  nerdfonts = callPackage ./pkgs/nerdfonts{};
 
   # vcvrack
   # -------
